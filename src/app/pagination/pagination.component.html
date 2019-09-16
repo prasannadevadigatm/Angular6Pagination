@@ -1,0 +1,30 @@
+<div class="paginationc justify-content-center">
+    <ul>
+        <li class="page-itemc" (click)="setFirstPage()" *ngIf="isNotFirstPage()">
+            <a class="page-linkc">
+                First page
+            </a>
+        </li>
+        <li class="page-itemc" (click)="setPrevPage()" *ngIf="isNotFirstPage()">
+            <a class="page-linkc">
+                Prev
+            </a>
+        </li>
+        <li class="page-itemc" (click)="setPage(i)" *ngFor="let i of [] | paginationLoop:lowerLimit():pageCount | slice:0:5" [ngClass]="{ 'active': currentPage == i }"> 
+            <a class="page-linkc"> 
+                <i>{{i+1}}</i> 
+            </a> 
+        </li>
+        <li class="page-itemc" (click)="setNextPage()" *ngIf="isNotLastPage()">
+            <a class="page-linkc">
+               Next 
+            </a>
+        </li>
+        <li class="page-itemc" (click)="setLastPage()" *ngIf="isNotLastPage()">
+            <a class="page-linkc">
+                Last Page
+            </a>
+        </li>
+    </ul>
+    <ul class="pull-right pagination-input"><li>Page No <input name="pagenumber" type="text" [(ngModel)]="page.number" class="input-control"> <button class="btn btn-sm btn-primary btnRound" [disabled]="!page.number" (click)="goto(page.number)">Go</button> Total Pages : {{pageCount}}</li></ul>
+</div>

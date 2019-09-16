@@ -1,0 +1,52 @@
+$borderColor: #ddd;
+.paginationc ul {
+  display: inline-block !important;
+  padding: 0;
+  margin: 0;
+}
+
+.paginationc ul li {
+  display: inline !important;
+}
+.paginationc ul > li > a {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid $borderColor;
+  border-left-width: 0;
+  cursor: pointer;
+  font-size: 12px;
+}
+.paginationc ul > li:first-child > a {
+  border-left-width: 1px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+.paginationc ul > li.active > a {
+  background-color: $borderColor !important;
+  color: #fff;
+}
+
+.paginationc ul > li:last-child > a {
+  border-right-width: 1px;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.paginationc ul li input {
+  width: 100px !important;
+  height: 30px;
+}
+.pagination-input {
+  font-size: 12px;
+  .btn {
+    background: $borderColor;
+    border: 1px solid $borderColor;
+    border-radius: 24px;
+    padding: 2px 14px;
+    font-size: 12px;
+  }
+}

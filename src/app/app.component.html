@@ -1,0 +1,15 @@
+<div class="container">
+    <h4 class="text-center">Angular Custom Pagination</h4>
+    <div class="card card-body">
+      <div class="card card-body mb10">
+         <h4 class="text-center">{{data.currentPage + 1}}</h4>
+         <h5 class="text-center">Showing {{data.currentPage + 1}} of {{data.totalNoOfPages}}</h5>
+      </div>
+      <div>
+        <app-pagination [currentPage]="data.currentPage"
+        [pageCount]="data.totalNoOfPages"
+        (onClick)="goToPage($event)"></app-pagination>
+      </div>
+    </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
